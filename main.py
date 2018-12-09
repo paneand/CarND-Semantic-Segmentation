@@ -77,7 +77,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
     :param train_op: TF Operation to train the neural network
     :param cross_entropy_loss: TF Tensor for the amount of loss
     :param input_image: TF Placeholder for input images
-    :param correct_label: TF Placeholder for label images
+    param correct_label: TF Placeholder for label images
     :param keep_prob: TF Placeholder for dropout keep probability
     :param learning_rate: TF Placeholder for learning rate
     """
@@ -88,7 +88,7 @@ tests.test_train_nn(train_nn)
 
 def run():
     num_classes = 2
-    image_shape = (160, 576)
+    image_shape = (160, 576)  # KITTI dataset uses 160x576 images
     data_dir = '/data'
     runs_dir = './runs'
     tests.test_for_kitti_dataset(data_dir)
